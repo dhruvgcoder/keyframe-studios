@@ -9,8 +9,13 @@ const BookingPage: React.FC = () => {
     <div className="min-h-screen bg-white flex flex-col">
       <Header />
       <main className="flex-grow">
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2">
-          <div className="border-l border-r border-t border-brand-gray-200 px-6 md:px-8 py-16">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2 relative overflow-hidden">
+          {/* Colorful Background Accents */}
+          <div className="absolute top-0 left-0 w-72 h-72 bg-purple-500/15 rounded-full blur-3xl"></div>
+          <div className="absolute top-20 right-0 w-96 h-96 bg-blue-500/15 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-1/4 w-64 h-64 bg-pink-500/15 rounded-full blur-3xl"></div>
+          
+          <div className="border-l border-r border-t border-brand-gray-200 px-6 md:px-8 py-16 relative z-10 bg-white/50 backdrop-blur-sm">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

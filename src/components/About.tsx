@@ -4,8 +4,14 @@ import SectionTitle from './SectionTitle';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-8">
-      <div className="border-l border-r border-t border-brand-gray-200 px-6 md:px-8 py-16">
+    <section id="about" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Colorful Background Accents */}
+      <div className="absolute top-0 left-0 w-72 h-72 bg-purple-500/15 rounded-full blur-3xl"></div>
+      <div className="absolute top-20 right-0 w-96 h-96 bg-blue-500/15 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-green-500/15 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 right-1/4 w-64 h-64 bg-pink-500/15 rounded-full blur-3xl"></div>
+      
+      <div className="border-l border-r border-t border-brand-gray-200 px-6 md:px-8 py-16 relative z-10 bg-white/50 backdrop-blur-sm">
         <SectionTitle 
           title="Why Choose Keyframe Studios?" 
           subtitle="We're more than just editors; we're storytellers." 
@@ -19,9 +25,9 @@ const About: React.FC = () => {
             transition={{ duration: 0.7 }}
           >
             <img 
-              src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=1964&auto=format&fit=crop" 
-              alt="Video editing suite" 
-              className="rounded-lg object-cover w-full h-full max-h-[500px] shadow-subtle"
+              src="src/assets/kf.svg" 
+              alt="Keyframe Studios Logo" 
+              className="rounded-lg object-contain w-full h-full max-h-[500px]"
             />
           </motion.div>
           <motion.div
